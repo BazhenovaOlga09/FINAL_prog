@@ -1,0 +1,6 @@
+venv/
+.idea/
+creds/
+config.py
+admin.py
+*.db
