@@ -9,7 +9,7 @@ logging.basicConfig(filename=LOGS, level=logging.INFO,
                     format="%(asctime)s FILE: %(filename)s IN: %(funcName)s MESSAGE: %(message)s", filemode="w")
 
 def create_new_token():
-    url = "http://158.160.139.133/computeMetadata/v1/instance/service-accounts/default/token"
+    url = "http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token"
     headers = {
         "Metadata-Flavor": "Google"
     }
@@ -25,6 +25,7 @@ def create_new_token():
             logging.error(f"Ошибка получения iam_token. Статус-код: {response.status_code}")
     except Exception as e:
         logging.error(f"Ошибка получения iam_token: {e}")
+        exit()
 
 def get_creds():
     try:
