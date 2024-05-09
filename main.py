@@ -52,7 +52,7 @@ def process_tts(message):
 
     tts_symbol = is_tts_symbol_limit(message, text)
     if not tts_symbol:
-        bot.send_message(user_id, "Извини но ты потратил все токены для перевода из текста в речь(((((, попробуй отправить голосовое)", reply_markup=create_keyboard(["/stt"]))
+        bot.send_message(user_id, tts_symbol)
         return
 
     status_tts, tts_text = text_to_speech(text)
@@ -87,7 +87,7 @@ def prossec_stt(message):
 
     stt_blocks = is_stt_block_limit(message, message.voice.duration)
     if not stt_blocks:
-        bot.send_message(user_id, "Извини но ты потратил все токены для спич кит(((((, попробуй написать текстом)", reply_markup=create_keyboard(["/tts"]))
+        bot.send_message(user_id, stt_blocks)
         return
 
 
@@ -116,7 +116,7 @@ def voice_message(message):
 
         stt_blocks = is_stt_block_limit(message, message.voice.duration)
         if not stt_blocks:
-            bot.send_message(user_id, "Извини но ты потратил все токены для спич кит(((((, попробуй написать текстом)")
+            bot.send_message(user_id, stt_blocks)
             return
 
         status_stt, stt_text = speech_to_text(file)
