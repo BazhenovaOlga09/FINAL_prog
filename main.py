@@ -131,7 +131,7 @@ def voice_message(message):
 
         total_gpt_tokens, error_message = is_gpt_token_limit(last_messages, total_spent_tokens)
         if error_message:
-            bot.send_message(user_id, "Упс!!! Технические шоколадки")
+            bot.send_message(user_id, "К сожалению ты потратил все токены для обращения к GPT, попробуй команды /stt или /tts!", reply_markup=create_keyboard(["/tts", "/stt"]))
             bot.send_message(user_id, error_message)
             return
 
@@ -186,7 +186,7 @@ def text_message(message):
 
         total_gpt_tokens, error_message = is_gpt_token_limit(last_messages, total_spent_tokens)
         if error_message:
-            bot.send_message(user_id, "Упс!!! Технические шоколадки")
+            bot.send_message(user_id, "К сожалению ты потратил все токены для обращения к GPT, попробуй команды /stt или /tts!", reply_markup=create_keyboard(["/tts", "/stt"]))
             bot.send_message(user_id, error_message)
             return
 
