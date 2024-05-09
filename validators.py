@@ -1,7 +1,6 @@
 import db
 from config import  MAX_USERS, MAX_USER_TTS_SYMBOLS, MAX_USER_STT_BLOCKS, MAX_GPT_TOKENS, MAX_USER_GPT_TOKENS, MAX_TTS_SYMBOLS
-from creds import get_bot_token
-from creds import get_creds
+from creds import get_bot_token, get_creds
 import requests
 import sqlite3
 import math
