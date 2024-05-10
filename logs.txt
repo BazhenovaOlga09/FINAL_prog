@@ -1,1 +1,4 @@
-2024-05-07 18:56:18,053 FILE: creds.py IN: create_new_token MESSAGE: Ошибка получения iam_token: HTTPConnectionPool(host='158.160.139.133', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/service-accounts/default/token (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000254AF16F2E0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2024-05-10 11:26:05,238 FILE: creds.py IN: create_new_token MESSAGE: РџРѕР»СѓС‡РµРЅ РЅРѕРІС‹Р№ iam_token
+2024-05-10 11:26:05,255 FILE: creds.py IN: create_new_token MESSAGE: РџРѕР»СѓС‡РµРЅ РЅРѕРІС‹Р№ iam_token
+2024-05-10 11:26:05,271 FILE: creds.py IN: create_new_token MESSAGE: РџРѕР»СѓС‡РµРЅ РЅРѕРІС‹Р№ iam_token
+2024-05-10 11:26:05,273 FILE: db.py IN: create_database MESSAGE: DATABASE: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СЃРѕР·РґР°РЅР°
