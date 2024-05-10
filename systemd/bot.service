@@ -7,7 +7,7 @@ User=student
 Group=student
 Type=simple
 Restart=always
-ExecStart=/usr/bin/python3 /home/student/Final_prog4/main.py
+ExecStart=/usr/bin/python3 /home/student/Final_prog/main.py
 
 [Install]
 WantedBy=multi-user.target
