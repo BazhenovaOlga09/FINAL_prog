@@ -9,5 +9,6 @@ Type=simple
 Restart=always
 ExecStart=/usr/bin/python3 /home/student/FINAL_prog/main.py
 
+
 [Install]
 WantedBy=multi-user.target

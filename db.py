@@ -83,7 +83,7 @@ def select_n_last_messages(user_id, n_last_messages=4):
             cursor = conn.cursor()
 
             cursor.execute('''
-            SELECT message, role, total_gpt_tokens FROM messages WHERE user_id=? ORDER BY id DESC LIMIT ?''',
+            SELECT message, role, total_gpt_tokens FROM messages WHERE user_id=? and role = "assistant" ORDER BY id DESC LIMIT ?''',
                            (user_id, n_last_messages))
             data = cursor.fetchall()
 

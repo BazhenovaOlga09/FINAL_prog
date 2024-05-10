@@ -26,6 +26,10 @@ def create_new_token():
     except Exception as e:
         logging.error(f"Ошибка получения iam_token: {e}")
         exit()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 24724cf4fe207a9d38f59347a15e925ada39cd2d
 def get_creds():
     try:
 

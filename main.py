@@ -134,7 +134,11 @@ def voice_message(message):
 
         total_gpt_tokens, error_message = is_gpt_token_limit(last_messages, total_spent_tokens)
         if error_message:
+<<<<<<< HEAD
             bot.send_message(user_id, "Извини, но ты потратил все токены для GPT, попробуй ввести команды /stt или /tts", reply_markup=create_keyboard(["/stt", "/tts"]))
+=======
+            bot.send_message(user_id, "К сожалению ты потратил все токены для обращения к GPT, попробуй команды /stt или /tts!", reply_markup=create_keyboard(["/tts", "/stt"]))
+>>>>>>> 24724cf4fe207a9d38f59347a15e925ada39cd2d
             bot.send_message(user_id, error_message)
             return
 
@@ -186,11 +190,18 @@ def text_message(message):
         db.add_message(user_id=user_id, full_message=full_user_message)
 
         last_messages, total_spent_tokens = db.select_n_last_messages(user_id,4)
+<<<<<<< HEAD
         print(last_messages)
 
         total_gpt_tokens, error_message = is_gpt_token_limit(last_messages, total_spent_tokens)
         if error_message:
             bot.send_message(user_id, "Извини, но ты потратил все токены для GPT, попробуй ввести команды /stt или /tts", reply_markup=create_keyboard(["/stt", "/tts"]))
+=======
+        last_messages += {"text": message.text, "role": "user"}
+        total_gpt_tokens, error_message = is_gpt_token_limit(last_messages, total_spent_tokens)
+        if error_message:
+            bot.send_message(user_id, "К сожалению ты потратил все токены для обращения к GPT, попробуй команды /stt или /tts!", reply_markup=create_keyboard(["/tts", "/stt"]))
+>>>>>>> 24724cf4fe207a9d38f59347a15e925ada39cd2d
             bot.send_message(user_id, error_message)
             return
 
